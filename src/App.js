@@ -23,7 +23,6 @@ function App() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-
   }
 }))
 
