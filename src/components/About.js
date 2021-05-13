@@ -20,12 +20,15 @@ const About = ({title, dark, id}) => {
                             typeSpeed={100}
                         />
                         <TypeWriterEffect 
-                            text= "y soy Junior Developer"
+                            text= "Y soy Junior Developer"
                             textStyle={{fontSize: "1.2rem", fontWeight: "500px", }}
                             startDelay={2500}
                             cursorColor="Black"
                             typeSpeed={100}
                         />
+                        <Typography variant="h6" color="textSecondary">
+                            Texto que describe como somos de buenos programadores y lo mucho que vamos a aportar a la empresa que nos contrate.
+                        </Typography>
                     </CardContent>
                     <CardActions>
                         <Button variant="contained" className={ classes.pdfbutton}>
@@ -66,12 +69,22 @@ const useStyles = makeStyles((theme) => ({
        borderRadius: "10px",
        margin: theme.spacing(5),
     },
+    cardcontent: {
+        marginTop: theme.spacing(2),
+        "& h6":  {
+            marginTop: theme.spacing(6),
+
+            [theme.breakpoints.down("sm")]: {
+                display: "none",
+            },
+        },
+    },
     pdfbutton: {
         position: "absolute",
         bottom: "5rem",
         right: "4rem",
         [theme.breakpoints.down("sm")]: {
-            bottom: 10,
+            bottom: "2.5rem",
             right: "1rem",
         },
         backgroundColor: "tomato",
