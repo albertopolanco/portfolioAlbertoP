@@ -8,6 +8,7 @@ import BuildTwoToneIcon from "@material-ui/icons/BuildTwoTone"
 import ContactMailTwoToneIcon from "@material-ui/icons/ContactMailTwoTone"
 import MenuIcon from "@material-ui/icons/Menu"
 import CancelIcon from "@material-ui/icons/Cancel"
+import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll'
 
 
 
@@ -40,11 +41,20 @@ const Navbar = () => {
             icon: <ContactMailTwoToneIcon fontSize="large"/>
         },
     ]
+
+    const scrollToTop = () => {
+        scroll.scrollToTop()
+    }
     return (
         <>
         <AppBar position="sticky" className={ classes.root }>
            <Toolbar className={ classes.toolbar }>
-                <img src={ logo } className={ classes.logo } alt="Logo" />
+                <img 
+                    src={ logo } 
+                    className={ classes.logo } 
+                    alt="Logo" 
+                    onClick={scrollToTop}
+                    />
                 <List className={ classes.menu }>
                     {
                         links.map(({ id, text }, index) => (
